@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(0, 0%, 100%);
+    font-family: "Hanken Grotesk", sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.1);
+    background-color: hsl(0, 0%, 100%);
+}
+
+.result {
+    color: hsl(0, 0%, 100%);
+    background: linear-gradient(hsl(252, 100%, 64%), hsl(241, 81%, 54%));
+    border-radius: 5%;
+    max-width: 50%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.centered {
+    position: absolute;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 5%;
+    height: 350px;
+    width: 490px;
+    box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.1);
+}
+
+.summary {
+    display: flex;
+    flex-direction: column;
+   
+    margin-left: 50%;
+    gap: 25px;
+    padding: 20px;
+}
+
+.result h3:first-child {
+    padding: 8px 15px 20px;
+    color: hsl(222, 22%, 76%);
+    font-weight: 200;
+}
+
+.result h3:nth-child(3) {
+    font-size: 20px;
+    padding: 25px 0 10px 0;
+}
+
+.result p:nth-child(4) {
+    color: hsl(222, 22%, 76%);
+    font-size: 13px;
+    padding: 12px;
+}
+
+.circle {
+    width: 140px;
+    height: 130px;
+    border-radius: 50%;
+    background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+}
+
+.circle p:first-child {
+    font-size: 40px;
+    padding: 40px 0 0 0;
+}
+
+.circle p:nth-child(2) {
+    color: hsl(222, 22%, 76%);
+    font-size: 11px;
+}
+
+.summary h3 {
+    padding: 10px 0 0 0;
+}
+
+.summary p:nth-child(2),
+.summary p:nth-child(3),
+.summary p:nth-child(4),
+.summary p:nth-child(5) {
+    border-radius: 6px;
+    height: 30px;
+    padding: 0 0 0 5px;
+}
+
+.summary p:nth-child(2) {
+    background-color: hsl(0, 52%, 95%);
+    color: hsl(0, 100%, 67%);
+}
+
+.summary p:nth-child(3) {
+    background-color: hsl(36, 56%, 96%);
+    color: hsl(39, 100%, 56%);
+}
+
+.summary p:nth-child(4) {
+    background-color: hsl(168, 71%, 95%);
+    color: hsl(166, 100%, 37%);
+}
+
+.summary p:nth-child(5) {
+    background-color: hsl(227, 85%, 95%);
+    color: hsl(234, 85%, 45%);
+}
+
+.summary p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.summary p img {
+    height: 20px;
+    width: 20px;
+}
+
+.summary p span {
+
+    margin-left: auto;
+}
+
+button {
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    color: white;
+    background: linear-gradient(hsl(252, 100%, 64%), hsl(241, 81%, 54%));
+    border: transparent;
+    border-radius: 25px;
+}
+
+button.active {
+    background-color:hsl(224, 30%, 27%);
+}
+@media (max-width: 400px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .result {
+      max-width: none;
+      height: auto;
+      position: static;
+      margin-bottom: 20px;
+    }
+  
+    .centered {
+      width: 100%;
+      height:auto;
+      margin-top: 20px; 
+    }
+  
+    .summary {
+      margin-left: -10px;
+  }
+  
+}
